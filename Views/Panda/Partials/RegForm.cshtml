@@ -1,0 +1,21 @@
+@model trashpanda.Models.RegViewModel
+
+<h3>Registration!</h3>
+<form asp-controller="Panda" asp-action="Register" method="post">
+    <span asp-validation-for="Name"></span>
+    <label asp-for="Name"></label>
+    <input asp-for="Name"/>
+    <span asp-validation-for="Alias"></span>
+    <label asp-for="Alias"></label>
+    <input asp-for="Alias"/>
+    <span asp-validation-for="Email"></span>
+    <label asp-for="Email"></label>
+    <input asp-for="Email"/>
+    <span asp-validation-for="Password"></span>
+    <label asp-for="Password"></label>
+    <input asp-for="Password"/>
+    <span asp-validation-for="ConfirmPassword"></span>
+    <label asp-for="ConfirmPassword"></label>
+    <input asp-for="ConfirmPassword"/>
+    <input class="line" type="submit" value="Register" />
+</form>

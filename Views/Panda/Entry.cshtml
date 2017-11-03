@@ -1,0 +1,22 @@
+﻿@using trashpanda.Models
+
+@{
+    ViewData["Title"] = "Entry";
+}
+
+<h3>Welcome!</h3>
+@{
+    if(TempData.ContainsKey("ErrorMessage"))
+    {
+        <h4>@TempData["ErrorMessage"].ToString()</h4>
+    }
+}
+<div class="forms">
+    <div class="reg">
+        @Html.Partial("Partials/RegForm")
+    </div>
+
+    <div class="log">
+        @Html.Partial("Partials/LogForm")
+    </div>
+</div>

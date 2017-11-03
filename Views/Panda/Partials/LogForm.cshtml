@@ -1,0 +1,12 @@
+@model trashpanda.Models.LoginViewModel
+
+<h3>Login!</h3>
+<form asp-controller="Panda" asp-action="Login" method="post">
+    <span asp-validation-for="Username"></span>
+    <label asp-for="Username"></label>
+    <input asp-for="Username"/>
+    <span asp-validation-for="PWD"></span>
+    <label asp-for="PWD"></label>
+    <input asp-for="PWD"/>
+    <input class="line" type="submit" value="Login" />
+</form>

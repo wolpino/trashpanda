@@ -1,0 +1,7 @@
+@model trashpanda.Models.PostViewModel
+
+<form asp-controller="Trash" asp-action="add" method="post">
+    <span asp-validation-for="idea"></span>
+    <input class="box" asp-for="idea" placeholder="Post something witty here..."/>
+    <input type="submit" value="Idea!" />
+</form>

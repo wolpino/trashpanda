@@ -1,0 +1,50 @@
+body{padding-top:50px;padding-bottom:20px}.body-content{padding-left:15px;padding-right:15px}input,select,textarea{max-width:280px}
+
+span, .line{
+    display: block;
+}
+
+.reg, .log{
+    display: inline-block;
+}
+
+
+.log{
+    vertical-align: top;
+}
+
+.forms{
+    margin: 20px auto;    
+}
+
+.box{
+    width: 400px;
+    
+}
+.navbar{
+    margin-left: 500px;
+}
+
+.message{
+    border: 2px solid black;
+    display: inline-block;
+    width: 400;
+}
+
+.name{
+    display: inline-block;
+    vertical-align: top;
+}
+
+.boxed{
+    display: inline-block;
+    width: 450px;
+}
+
+.post{
+    display: block;    
+}
+
+a{
+    margin-left: 30px;
+}

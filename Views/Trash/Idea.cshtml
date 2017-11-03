@@ -1,0 +1,25 @@
+
+@Html.Partial("Partials/Header")
+
+<p class="name"><a href="/users/@ViewBag.ideadeets.Poster.userid">@ViewBag.ideadeets.Poster.alias</a> says:</p>
+<p class="message">@ViewBag.ideadeets.postmessage</p>
+<h4>People who liked this post:</h4>
+
+<table class="table-striped" class="table-bordered">
+    <tr>
+        <th>Alias</th>
+        <th>Name</th>
+    </tr>
+@foreach(var post in @ViewBag.ideadeets.Likers)
+{
+    <tr>
+        <td><a href="/users/@post.Liker.userid">@post.Liker.alias</a></td>
+        <td>@post.Liker.name</td>
+    </tr>
+}
+</table>
+
+@if(@ViewBag.ideadeets.Likers.Count < 1)
+{
+    <p>No Likes yet!</p>
+}

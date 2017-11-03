@@ -1,0 +1,26 @@
+@using trashpanda.Models;
+@{
+    ViewData["Title"] = "Home";
+}
+<div class="navbar">
+    <a asp-area="" asp-controller="Panda" asp-action="Logout">Logout</a>
+</div>
+
+
+<h3>Hi @ViewBag.name!</h3>
+
+@Html.Partial("Partials/PostForm")
+
+@foreach(Post post in @ViewBag.allposts)
+{
+    <div class="post">
+        <p class="name"><a href="users/@post.Poster.userid">@post.Poster.alias</a> says:</p>
+        <div class = "boxed">
+            <p class="message">@post.postmessage</p>
+            @if(post.Poster.userid == ViewBag.id)
+                {<a class="message" href="destroy/@post.postid">XX</a>}            
+            <p><a href="like/@post.postid">Like</a>
+            <a href="bright_ideas/@post.postid">@post.Likers.Count people </a>like this</p>
+        </div>
+    </div>
+}
